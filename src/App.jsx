@@ -9,11 +9,21 @@ import SearchBar from './components/SearchBar';
 function App() {
   return (
     <Provider store={store}>
-      <div className="p-4 max-w-4xl mx-auto">
-        <h1 className="text-2xl font-bold mb-4">Client Records Management</h1>
-        <Upload />
-        <SearchBar />
-        <RecordList />
+      <div className="min-h-screen bg-gray-50">
+        <div className="p-4 max-w-7xl mx-auto">
+          <h1 className="text-3xl font-bold text-center mb-8">
+            Client Records Management
+          </h1>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+            <div className="mb-4 lg:mb-0">
+              <Upload />
+            </div>
+            <div>
+              <SearchBar />
+            </div>
+          </div>
+          <RecordList />
+        </div>
       </div>
     </Provider>
   );
